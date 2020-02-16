@@ -43,7 +43,7 @@ const IndexPage = () => {
             <p class="lead">Share & Learn new Investment Techniques</p>
             <div class="buttons">
               <button class="btn btn-primary">Sign Up</button>
-              <button class="btn btn" onClick={openNetlifyModal()}>
+              <button class="btn btn" onClick={()=> {openNetlifyModal()}}>
                 Login
               </button>
             </div>
