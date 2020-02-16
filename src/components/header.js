@@ -1,42 +1,31 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import HeaderDash from "./header-dash"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
+  <nav class="navbar bg-dark">
+    <HeaderDash />
+    <ul>
+      <li>
+        <Link to="/profiles">Inverstors</Link>
+      </li>
+      <li>
+        <Link to="/posts">Posts</Link>
+      </li>
+      <li>
+        <Link to="/dashboard">
+          <i className="fa fa-user"></i>
+          <span class="hide-sm"> Dashboard</span>
         </Link>
-      </h1>
-    </div>
-  </header>
+      </li>
+      <li>
+        <Link to='/login'>
+          <i className="fa fa-sign-out"></i>
+          <span class="hide-sm"> Sign Out</span>
+        </Link>
+      </li>
+    </ul>
+  </nav>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
