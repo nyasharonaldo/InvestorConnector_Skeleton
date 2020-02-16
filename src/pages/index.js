@@ -34,6 +34,7 @@ const IndexPage = () => {
   initNetlifyIdentity()
   return (
     <Layout>
+      <NetlifyIdentity/>
       <SEO title="Investor Connector" />
       <section class="landing">
         <div class="dark-overlay">
