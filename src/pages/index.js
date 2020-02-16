@@ -31,7 +31,7 @@ class NetlifyIdentity extends Component {
 }
 
 const IndexPage = () => {
-  initNetlifyIdentity()
+  
   return (
     <Layout>
       <NetlifyIdentity/>
